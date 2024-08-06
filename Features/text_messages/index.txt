@@ -1,0 +1,10 @@
+
+table Text_Message {
+    id integer
+    phone_no varchar
+    attached json
+    value varchar
+    sender_ref varchar
+    receiver_ref varchar
+    created_at date
+  }

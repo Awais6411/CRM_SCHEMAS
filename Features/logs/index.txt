@@ -1,0 +1,8 @@
+table Logs {
+  id integer
+  created_at date
+  category varchar
+  user_ref varchar  
+  description varchar
+ }
+

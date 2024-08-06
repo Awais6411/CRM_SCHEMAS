@@ -1,0 +1,15 @@
+
+table Task {
+  id integer
+  subject varchar
+  details varchar
+  contact varchar
+  assigned_to json   
+  policies json   
+  start_date date
+  end_date date
+  status boolean   
+  priority varchar
+  completion decimal
+  set_reminder boolean
+}

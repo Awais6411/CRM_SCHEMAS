@@ -1,0 +1,14 @@
+table Files {
+  id integer
+  files json  
+  title varchar
+  tags json  
+  description varchar
+  apply_description boolean
+  policy_ref varchar
+  line_of_business varchar
+  effective date
+  user_ref intetger
+}
+
+

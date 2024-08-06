@@ -1,0 +1,57 @@
+table Claims {
+    id integer
+    claim_number integer
+    claim_status varchar
+    claim_type varchar
+    date_opened date
+    date_of_loss date
+    date_reported date
+    created_by varchar
+    coverage varchar
+    date_closed date   
+    disputed_suit_pending boolean
+    chargeable_to_company boolean
+    amount_of_loss decimal
+    amount_salvaged decimal
+    amount_reserved decimal
+    amount_paid decimal
+    location_street varchar   
+    location_city varchar   
+    location_state_province varchar   
+    location_zip_code varchar   
+    location_country varchar   
+    location_description varchar   
+    incident_description varchar   
+    damage_description varchar   
+    location_of_loss_id  integer 
+    InsuredVehicle_id integer
+    ClaimParties integer
+    ClaimPayments integer
+  }
+
+table Insured_Vehicle {
+    id integer
+     year integer
+    make varchar
+    model varchar
+    vin varchar
+    vehicle_type varchar
+  }
+table Claim_Parties {
+    id integer
+    full_name varchar
+    phone_number varchar
+    email varchar
+    party_type varchar
+  }
+table Claim_Payments {
+    id integer
+     date date
+    check_number varchar
+    amount decimal
+    comments varchar   
+  }
+
+Ref: Claims.InsuredVehicle_id - Insured_Vehicle.id
+Ref: Claims.ClaimParties > Claim_Parties.id
+Ref: Claims.ClaimPayments > Claim_Payments.id

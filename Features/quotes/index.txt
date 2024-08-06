@@ -1,0 +1,18 @@
+table Quotes {
+  id integer
+  policy_ref integer
+  quote_number integer
+  quote_status varchar
+  quote_sub_status varchar
+  writing_carrier varchar
+  mga_or_broker varchar
+  parent_carrier varchar
+  business_type varchar
+  submission_date date
+  quote_expiration_date date
+  quoted_by varchar
+  condition varchar
+  premium_base varchar
+}
+
+

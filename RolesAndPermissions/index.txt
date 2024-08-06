@@ -1,0 +1,67 @@
+
+// permission and permission
+
+Table security_policies {
+    id interger
+    can_add_customer_policy bool
+    can_modify_customer_policy bool
+    can_delete_customer_policy bool
+  }
+  Table security_notes {
+    id interger
+    can_add_notes bool
+    can_modify_notes bool
+    can_delete_notes bool
+  }
+  
+  Table security_textMessages {
+    id interger
+    can_send_text_messages bool
+    can_delete_text_messages bool
+  }
+  
+  Table security_tasks {
+    id interger
+    can_add_tasks bool
+    can_modify_tasks bool
+    can_delete_tasks bool
+  }
+  
+  Table security_userManagement {
+    id interger
+    can_add_roles bool
+    roles bool
+    admins bool
+    customers bool
+    agents bool
+  }
+
+
+
+
+table Security_Permission {
+  id integer
+  text_messages integer
+  tasks integer
+  user_management integer
+  notes integer
+  policies integer
+}
+
+Ref: Security_Permission.text_messages - security_textMessages.id
+Ref: Security_Permission.policies - security_policies.id
+Ref: Security_Permission.notes - security_notes.id
+Ref: Security_Permission.tasks -  security_tasks.id
+Ref: Security_Permission.user_management -  security_userManagement.id
+
+
+Table Management_Roles {
+  id integer
+  name varchar
+  type varchar
+  description varchar
+  permission varchar
+}
+
+
+Ref: Management_Roles.permission -  Security_Permission.id

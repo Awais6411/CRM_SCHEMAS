@@ -1,0 +1,17 @@
+  table note_comments {
+  id integer
+  user_ref varchar
+  created_at date
+  note_ref integer
+  comment varchar
+}
+table add_Note {
+  id integer
+   title varchar
+  add_to_important_notes bool
+  created_ref varchar
+  assoicate_policy integer
+  comments integer
+}
+
+  Ref: add_Note.comments - note_comments.id
