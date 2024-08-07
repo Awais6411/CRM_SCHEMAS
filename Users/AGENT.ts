@@ -6,7 +6,7 @@ export interface Agent {
   current_status: Boolean;
   location: String;
   profile_picture: String;
-  primary_email: String;
+  email: String;
   password: string;
   email_signature: string;
   role: string;

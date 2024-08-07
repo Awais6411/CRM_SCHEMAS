@@ -4,7 +4,7 @@ export interface _address {
   city: string;
   province: string;
   country: string;
-  zip_code: string;
+  zip_code: number;
   address_type: string;
   primary_address: boolean;
   comment: string;

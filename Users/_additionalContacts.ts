@@ -15,7 +15,7 @@ export interface _additionalContacts {
   city: String;
   state_or_province: String;
   country: String;
-  zip_code: String;
+  zip_code: number;
   date_of_birth: String;
   marital_status: String;
   gender: String;

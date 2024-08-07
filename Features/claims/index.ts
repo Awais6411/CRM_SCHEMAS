@@ -37,7 +37,7 @@ export default interface Claims {
   location_street: string;
   location_city: string;
   location_state_province: string;
-  location_zip_code: string;
+  location_zip_code: number;
   location_country: string;
   location_description: string;
   incident_description?: string;

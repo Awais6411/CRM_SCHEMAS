@@ -8,12 +8,12 @@ export interface _employee {
   city: String;
   state_or_province: String;
   country: String;
-  zip_code: String;
+  zip_code: number;
   employer_web_page: String;
-  industry?: string;
-  occupation?: string;
-  employed_from?: string;
-  employed_to?: string;
+  industry: string;
+  occupation: string;
+  employed_from: string;
+  employed_to: string;
   employee_first_name: string;
   employee_last_name: string;
   add_number: VALUE_TYPE;
